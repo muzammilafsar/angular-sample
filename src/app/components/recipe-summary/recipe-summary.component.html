@@ -1,0 +1,23 @@
+<div  class="card col-6">
+  
+    <div class="card-header">
+      <div style="float:right">
+        <img src="{{ recipe.cover_photo ? recipe.cover_photo : '/assets/emptybowl.jpg'}}" style="width:150px;height:150px">
+      </div>
+      {{ recipe.title}}
+    </div>
+    <div class="card-body">
+      
+      <h5 class="card-title">{{ recipe.description }}</h5>
+      <div>
+        <div style="float:left;font-weight: bold; width:150px">Prepration time </div>
+        <div>{{ recipe.prepration_time }}</div>
+      </div>
+      <div>
+          <div style="float:left;font-weight: bold; width:150px">Feeds how many? </div>
+          <div>{{ recipe.feeds_this_many }}</div>
+        </div>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>

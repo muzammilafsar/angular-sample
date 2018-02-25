@@ -1,0 +1,26 @@
+<h1> This is our recipe</h1>
+
+
+<app-recipe-summary *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-summary>
+<div class="card">
+  <div class="card-body">
+    This is some text within a card body.
+  </div>
+  <div>
+    <div class="input group">
+      <input type="text" class="form-control" [(ngModel)]="recipe_in_progress.title" placeholder="Recipe title" name="title">
+    </div>
+    <div class="input group">
+      <textarea type="text" class="form-control"  [(ngModel)]="recipe_in_progress.description" placeholder="Recipe Description" name="description"></textarea>
+    </div>
+    <div class="input group">
+      <input type="text" class="form-control" [(ngModel)]="recipe_in_progress.feeds_this_many" placeholder="Feeds this many" name="feeds_this_many">
+    </div>
+    <div class="input group">
+      <input type="text" class="form-control" [(ngModel)]="recipe_in_progress.prepration_time"  placeholder="Prepration Time" name="prepration_time">
+    </div>
+    <div class="input group">
+        <input type="button" class="btn btn-default" (click)="addRecipeClicked()" value="add recipe" >
+      </div>
+  </div>
+</div>
